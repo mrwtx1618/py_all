@@ -1,0 +1,11 @@
+# -*- coding:UTF-8 -*-
+#reduce：让一个函数作用于一个序列
+l = range(1,6)
+def f(x,y):
+	return x * y
+r1 = reduce(f, l) #reduce可以把函数f作用于序列l上，reduce每次可以取两个值
+print r1
+
+###用lambda函数来实现，lambda函数是单行的，看起来更简洁些，只要一行代码来实现阶乘的功能
+r2 = reduce(lambda x,y: x * y, l)
+print r2
